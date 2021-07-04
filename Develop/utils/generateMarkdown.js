@@ -39,35 +39,35 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-    # ${data.title}
-    ${renderLicenseBadge(data.license)}
+  # ${data.title}
+  ${renderLicenseBadge(data.license)}
 
-    ## Description 
-    ${data.description}
+  ## Description 
+  ${data.description}
 
-    ## Table of Contents (Optional)
+  ## Table of Contents (Optional)
 
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
-    * [Features](#features)
-    * [Contribution Guidelines](#contribution)
-    * [Tests](#tests)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [License](#license)
+  * [Features](#features)
+  * [Contribution Guidelines](#contribution)
+  * [Tests](#tests)
 
 
-    ## Installation
-    ${data.installation}
+  ## Installation
+  ${data.installation}
     
-    ## Usage 
-    ${data.usage}
+  ## Usage 
+  ${data.usage}
 
-    ${renderLicenseSection}
+  ${renderLicenseSection}
 
-    ## Contribution Guidelines
-    ${data.contritution}
+  ## Contribution Guidelines
+  ${data.contritution}
 
-    ## Tests
+  ## Tests
 
     Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
