@@ -5,14 +5,9 @@ const generatePage = require("./utils/generateMarkdown");
 const licences = [
   "Apache license 2.0",
   "Boost Software License 1.0",
-  "BSD 2-clause 'Simplified' license",
-  "BSD 3-clause 'New' or 'Revised' license",
-  "Creative Commons Zero v1.0 Universal",
-  "Eclipse Public License 2.0",
   "GNU Affero General Public License v3.0",
-  "GNU General Public License v2.0",
   "GNU General Public License v3.0",
-  "GNU Lesser General Public License v2.1",
+  "GNU Lesser General Public License v3.0",
   "MIT",
   "Mozilla Public License 2.0",
   "The Unlicense",
@@ -88,6 +83,7 @@ function init() {
   return inquirer
     .prompt(questions)
     .then((data) => {
+      console.log(data);
       return writeToFile(data);
     })
     .catch((err) => {
