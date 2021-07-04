@@ -1,6 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (!license) {
+    return "";
+  }
+
+  return `
+  [![License](https://img.shields.io/badge/LABEL-${license}-blue)](https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=yellow)
+    `;
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -9,6 +17,11 @@ function renderLicenseLink(license) {}
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
+
+// ask user yes/no question if the want a TOC
+// take user input and validate as true/false
+// create function to take validation and either include or exclude TOC
+// create html template that will create a TOC based on other User inputs
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -19,6 +32,7 @@ function generateMarkdown(data) {
 
     ${data.description}
 
+    ${renderLicenseBadge(data.license)}
     ## Table of Contents (Optional)
 
     If your README is very long, add a table of contents to make it easy for users to find what they need.

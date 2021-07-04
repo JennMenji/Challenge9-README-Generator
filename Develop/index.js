@@ -1,8 +1,22 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const Choices = require("inquirer/lib/objects/choices");
 const generatePage = require("./utils/generateMarkdown");
+const licences = [
+  "Apache license 2.0",
+  "Boost Software License 1.0",
+  "BSD 2-clause 'Simplified' license",
+  "BSD 3-clause 'New' or 'Revised' license",
+  "Creative Commons Zero v1.0 Universal",
+  "Eclipse Public License 2.0",
+  "GNU Affero General Public License v3.0",
+  "GNU General Public License v2.0",
+  "GNU General Public License v3.0",
+  "GNU Lesser General Public License v2.1",
+  "MIT",
+  "Mozilla Public License 2.0",
+  "The Unlicense",
+];
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -28,18 +42,34 @@ const questions = [
     message:
       "Provide instructions and examples for use. Include screenshots as needed.",
   },
-  //   {
-  //     type: "input",
-  //     name: "contributionGuidelines",
-  //     message: "rfrf",
-  //   },
   {
-    type: "confirm",
-    name: "contentsConfrim",
+    type: "input",
+    name: "contribution",
     message:
-      "Would you like to include a table of contents, to make it easy for users to find what they need? (Optional)",
-    default: true,
+      "If you created an application or package and would like other developers to contribute to it, you will want to add guidelines for how to do so.",
   },
+  {
+    type: "input",
+    name: "tests",
+    message:
+      "Please provide code examples and explicit instructions on how to run all necessary tests.",
+  },
+  {
+    type: "list",
+    loop: true,
+    name: "license",
+    message: "Please select a license from the choices below.",
+    choices: licences,
+    default: false,
+  },
+
+  //   {
+  //     type: "confirm",
+  //     name: "contentsConfrim",
+  //     message:
+  //       "Would you like to include a table of contents, to make it easy for users to find what they need? (Optional)",
+  //     default: true,
+  //   },
 ];
 
 // TODO: Create a function to write README file
