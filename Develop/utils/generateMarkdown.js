@@ -44,6 +44,7 @@ function generateMarkdown(data) {
   * [License](#license)
   * [Contribution Guidelines](#contributing)
   * [Tests](#tests)
+  * [Questions](#questions)
 
 
   ## Installation
@@ -62,6 +63,8 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
+  For more questions about this project you may use the below contact information:
+
   GitHub: https://github.com/${data.gitHubUsername}
   Email: ${data.email}
 `;
