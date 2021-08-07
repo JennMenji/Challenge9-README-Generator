@@ -41,7 +41,7 @@ const questions = [
     type: "input",
     name: "contribution",
     message:
-      "If you created an application or package and would like other developers to contribute to it, you will want to add guidelines for how to do so.",
+      "If you created an application or package and would like other developers to contribute to it, please add guidelines for how to do so here.",
   },
   {
     type: "input",
@@ -51,20 +51,24 @@ const questions = [
   },
   {
     type: "list",
-    loop: true,
+    loop: false,
     name: "license",
     message: "Please select a license from the choices below.",
     choices: licences,
     default: false,
   },
-
-  //   {
-  //     type: "confirm",
-  //     name: "contentsConfrim",
-  //     message:
-  //       "Would you like to include a table of contents, to make it easy for users to find what they need? (Optional)",
-  //     default: true,
-  //   },
+  {
+    type: "input",
+    name: "gitHubUsername",
+    message:
+      "Enter your GitHub Username so that others may contact you for questions.",
+  },
+  {
+    type: "input",
+    name: "email",
+    message:
+      "Enter your Email address and instructions on how to contact you for questions.",
+  },
 ];
 
 // TODO: Create a function to write README file

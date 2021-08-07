@@ -13,10 +13,6 @@ function renderLicenseBadge(license) {
       `;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
@@ -26,15 +22,11 @@ function renderLicenseSection(license) {
 
   return `
   ## License
+  ${renderLicenseBadge(license)}
 
-  The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
+  The license for this project is the ${license} License.
     `;
 }
-
-// ask user yes/no question if the want a TOC
-// take user input and validate as true/false
-// create function to take validation and either include or exclude TOC
-// create html template that will create a TOC based on other User inputs
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -60,15 +52,18 @@ function generateMarkdown(data) {
   ## Usage 
   ${data.usage}
 
-  ${renderLicenseSection}
+  ${renderLicenseSection(data.license)}
 
   ## Contributing
   ${data.contritution}
 
   ## Tests
+  Below are some examples on how to run the tests for this project.
+  ${data.tests}
 
-    Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
+  ## Questions
+  GitHub: https://github.com/${data.gitHubUsername}
+  Email: ${data.email}
 `;
 }
 
