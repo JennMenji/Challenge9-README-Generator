@@ -14,4 +14,4 @@ Navigate to your terminal within the root folder of the project and run "npm i" 
 
 ## Instructional Video
 
-![Instructional Video Link](https://drive.google.com/file/d/1cmqSEmkTcYywbYONh8CyDOFF-J69RSbq/view)
+https://drive.google.com/file/d/1cmqSEmkTcYywbYONh8CyDOFF-J69RSbq/view
