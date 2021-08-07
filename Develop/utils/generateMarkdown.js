@@ -23,7 +23,6 @@ function renderLicenseSection(license) {
   return `
   ## License
   ${renderLicenseBadge(license)}
-
   The license for this project is the ${license} License.
     `;
 }
@@ -56,7 +55,7 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)}
 
   ## Contributing
-  ${data.contritution}
+  ${data.contribution}
 
   ## Tests
   Below are some examples on how to run the tests for this project.

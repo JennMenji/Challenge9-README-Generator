@@ -34,8 +34,7 @@ const questions = [
   {
     type: "filter",
     name: "usage",
-    message:
-      "Provide instructions and examples for use. Include screenshots as needed.",
+    message: "Provide instructions and examples for use.",
   },
   {
     type: "input",
